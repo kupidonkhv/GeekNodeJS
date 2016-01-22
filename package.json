@@ -1,0 +1,14 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "descr",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kupidon",
+  "license": "ISC",
+  "dependencies": {
+    "ansi": "^0.3.1"
+  }
+}
