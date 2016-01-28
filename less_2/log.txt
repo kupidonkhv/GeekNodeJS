@@ -1,0 +1,1 @@
+{"all":74,"win":36,"loss":38,"prew":0,"cons":0,"max_win":7,"max_loss":6}
