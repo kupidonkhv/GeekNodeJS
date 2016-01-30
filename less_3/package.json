@@ -1,0 +1,21 @@
+{
+  "name": "less_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "cheerio": "^0.19.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "mysql": "^2.10.2",
+    "nodemailer": "^2.0.0",
+    "request": "^2.69.0",
+    "url": "^0.11.0"
+  }
+}
