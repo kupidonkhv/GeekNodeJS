@@ -6,7 +6,9 @@ var request = require('request');
 //      Помогите, плиз:
 //      Не получается достать результат от выполнения request (body.text)
 //      для выдачи не в консоль, а в браузер пользователю... :-(
-
+//
+//      http://localhost:5000/?Облако
+//      http://localhost:5001/?Облако
 
 var yandex = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20160130T051628Z.3abc1521a20b09cd.dd533a7666baf6d2569988954e6ad612bbe0562d&lang=ru-en&text=';
 
@@ -28,8 +30,6 @@ function onRequest(req, response) {
             }
         });
 
-        //var out = body;
-
         response.writeHead(200, {"Content-Type": "text/plain"});
 
         //response.write(body);
@@ -41,5 +41,12 @@ function onRequest(req, response) {
 http.createServer(onRequest).listen(5000);
 console.log("Server has started.");
 
+//////////////////////////////////////////////
+// ВТОРОЙ ВАРИАНТ:
+//////////////////////////////////////////////
 
-
+http.createServer(function (req, resp) {
+    var params = url.parse(req.url);
+    var x = request.get(yandex+params['query']);
+    x.pipe(resp);
+}).listen(5001);
