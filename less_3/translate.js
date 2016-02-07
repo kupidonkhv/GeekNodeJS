@@ -26,11 +26,12 @@ function onRequest(req, response) {
 
             if(response.statusCode == 200){
                 body = JSON.parse(body);
+                //response.write(body);
                 console.log('ПЕРЕВОД: ', body.text);
             }
         });
 
-        response.writeHead(200, {"Content-Type": "text/plain"});
+        //response.writeHead(200, {"Content-Type": "text/plain"});
 
         //response.write(body);
         //console.log(params['query']);
