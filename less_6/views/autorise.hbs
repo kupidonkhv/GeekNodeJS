@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{title}}</title>
+
+    <script src="/js/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Привет, Усернэйм</h1>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+
+        <div class="col-md-12">
+
+            {{#with data}}
+                <form method="POST" action="/">
+
+                    <div class="form-group">
+                        <label for="name">mail</label>
+                        <input type="text" class="form-control" id="mail" placeholder="mail" name="mail" value="{{mail}}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">password</label>
+                        <input type="text" class="form-control" id="password" placeholder="password" name="password" value="{{password}}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">Войти</button>
+                    </div>
+
+                </form>
+            {{/with}}
+
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2016 Генератор микроботов инкорпорейтед</p>
+    </footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    function confirmDelete() {
+        if (confirm("Вы подтверждаете удаление?")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
